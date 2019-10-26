@@ -38,9 +38,6 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 
-
-
-
 public class BaseTest {
 	
 	public WebDriver driver;
@@ -237,6 +234,8 @@ public class BaseTest {
 				e=driver.findElement(By.name(prop.getProperty(locatorKey)));
 			else if(locatorKey.endsWith("_xpath"))
 				e=driver.findElement(By.xpath(prop.getProperty(locatorKey)));
+			else if(locatorKey.endsWith("_css"))
+				e=driver.findElement(By.cssSelector(prop.getProperty(locatorKey)));
 			else if(locatorKey.endsWith("_linktext"))
 				e=driver.findElement(By.linkText(prop.getProperty(locatorKey)));	
 			else {
@@ -268,6 +267,8 @@ public boolean isElementPresent(String locatorKey){
 		elementList = driver.findElements(By.name(prop.getProperty(locatorKey)));
 	else if(locatorKey.endsWith("_xpath"))
 		elementList = driver.findElements(By.xpath(prop.getProperty(locatorKey)));
+	else if(locatorKey.endsWith("_css"))
+		elementList = driver.findElements(By.cssSelector(prop.getProperty(locatorKey)));
 	else{
 		reportFailure("Locator not correct - " + locatorKey);
 		Assert.fail("Locator not correct - " + locatorKey);

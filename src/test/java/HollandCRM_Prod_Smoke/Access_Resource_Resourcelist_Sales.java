@@ -48,7 +48,14 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 			wait(1);
 			
 			
-			click("Sales_Dropdown_xpath");
+			wait(2);
+			System.out.println("looking now");
+			click("Next_css");
+			
+			click("Project_Service_xpath");
+			
+			
+			//click("Sales_Dropdown_xpath");
 			softAssert.assertTrue(verifyText("Sales_xpath","Sales_Text_xpath"), "Text did not match");
 			wait(3);
 

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test6</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/2</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 24 10:15:13 CDT 2019</td>
+<td>Started on:</td><td>Wed Oct 23 14:53:20 CDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>89 seconds (89842 ms)</td>
+<tr><td>Total time:</td><td>78 seconds (78797 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,74 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales.Access_ResourceSkill_Sales()'><b>Access_ResourceSkill_Sales</b><br>Test class: HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales<br>Parameters: {Runmode=Y, Browser=Chrome}</td>
+<td><div><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ResourceScheduling&apos;]/span[1]/span&quot;}
+  (Session info: chrome=77.0.3865.120)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:06:42&apos;
+System info: host: &apos;IS54&apos;, ip: &apos;192.168.0.24&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:52645}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\KPatel\AppData\Local\Temp\scoped_dir11380_4805}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=77.0.3865.120, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 03d8f13ce1d633706191c7a624100b2d
+*** Element info: {Using=xpath, value=//*[@id=&apos;ResourceScheduling&apos;]/span[1]/span}
+	at com.datadriven.frame.base.BaseTest.reportFailure(BaseTest.java:311)
+	at com.datadriven.frame.base.BaseTest.getElement(BaseTest.java:250)
+	at com.datadriven.frame.base.BaseTest.click(BaseTest.java:172)
+	at HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales.Access_ResourceSkill_Sales(Access_ResourceSkill_Resourcelist_Sales.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1745866498", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1745866498'><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ResourceScheduling&apos;]/span[1]/span&quot;}
+  (Session info: chrome=77.0.3865.120)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:06:42&apos;
+System info: host: &apos;IS54&apos;, ip: &apos;192.168.0.24&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:52645}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\KPatel\AppData\Local\Temp\scoped_dir11380_4805}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=77.0.3865.120, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 03d8f13ce1d633706191c7a624100b2d
+*** Element info: {Using=xpath, value=//*[@id=&apos;ResourceScheduling&apos;]/span[1]/span}
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.datadriven.frame.base.BaseTest.reportFailure(BaseTest.java:311)
+	at com.datadriven.frame.base.BaseTest.getElement(BaseTest.java:250)
+	at com.datadriven.frame.base.BaseTest.click(BaseTest.java:172)
+	at HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales.Access_ResourceSkill_Sales(Access_ResourceSkill_Resourcelist_Sales.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+</pre></div></td>
+<td>66</td>
+<td>HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales@740fb309</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,19 +142,54 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales.Access_ResourceSkill_Resourcelist_Sales()'><b>Access_ResourceSkill_Resourcelist_Sales</b><br>Test class: HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales</td>
-<td></td>
+<td><div><pre>java.lang.Throwable: Method Access_ResourceSkill_Resourcelist_Sales.Access_ResourceSkill_Resourcelist_Sales()[pri:3, instance:HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales@740fb309] depends on not successfully finished methods
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace308620347", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace308620347'><pre>java.lang.Throwable: Method Access_ResourceSkill_Resourcelist_Sales.Access_ResourceSkill_Resourcelist_Sales()[pri:3, instance:HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales@740fb309] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+</pre></div></td>
 <td>0</td>
-<td>HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales@740fb309</td></tr>
+<td>null</td></tr>
 <tr>
-<td title='HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales.Access_ResourceSkill_Sales()'><b>Access_ResourceSkill_Sales</b><br>Test class: HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales<br>Parameters: {Runmode=Y, Browser=Chrome}</td>
-<td></td>
-<td>57</td>
-<td>HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales@740fb309</td></tr>
-<tr>
-<td title='HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales.Validate_NavToSelectedResourceskill()'><b>Validate_NavToSelectedResourceskill</b><br>Test class: HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales<br>Parameters: {Runmode=Y, Browser=Chrome}</td>
-<td></td>
-<td>17</td>
-<td>HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales@740fb309</td></tr>
+<td title='HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales.Validate_NavToSelectedResourceskill()'><b>Validate_NavToSelectedResourceskill</b><br>Test class: HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales</td>
+<td><div><pre>java.lang.Throwable: Method Access_ResourceSkill_Resourcelist_Sales.Validate_NavToSelectedResourceskill(java.util.Hashtable)[pri:2, instance:HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales@740fb309] depends on not successfully finished methods
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2116196063", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2116196063'><pre>java.lang.Throwable: Method Access_ResourceSkill_Resourcelist_Sales.Validate_NavToSelectedResourceskill(java.util.Hashtable)[pri:2, instance:HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales@740fb309] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
 </table><p>
 </body>
 </html>
