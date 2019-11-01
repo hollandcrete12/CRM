@@ -5,10 +5,10 @@
     <classes>
       <class name="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales">
         <methods>
-          <include name="ValidateAccessToResourceUnderSales" invocation-numbers="0"/>
+          <include name="ValidateAccessToResourceUnderSales"/>
           <include name="quit"/>
           <include name="Access_Resource_Resourcelist_Sales"/>
-          <include name="Validate_NavToSelectedResource_Name_Displayed"/>
+          <include name="Validate_NavToSelectedResource_Name_Displayed" invocation-numbers="0"/>
           <include name="init"/>
         </methods>
       </class> <!-- HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales -->
