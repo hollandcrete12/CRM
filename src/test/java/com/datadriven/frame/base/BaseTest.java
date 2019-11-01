@@ -267,6 +267,8 @@ public boolean isElementPresent(String locatorKey){
 		elementList = driver.findElements(By.name(prop.getProperty(locatorKey)));
 	else if(locatorKey.endsWith("_xpath"))
 		elementList = driver.findElements(By.xpath(prop.getProperty(locatorKey)));
+	else if(locatorKey.endsWith("_linktext"))
+		elementList = driver.findElements(By.linkText(prop.getProperty(locatorKey)));
 	else if(locatorKey.endsWith("_css"))
 		elementList = driver.findElements(By.cssSelector(prop.getProperty(locatorKey)));
 	else{

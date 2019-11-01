@@ -52,22 +52,25 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 			System.out.println("looking now");
 			click("Next_css");
 			
+		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
+			
 			click("Project_Service_xpath");
 			
 			
 			//click("Sales_Dropdown_xpath");
-			softAssert.assertTrue(verifyText("Sales_xpath","Sales_Text_xpath"), "Text did not match");
 			wait(3);
 
-			click("Resrouce_Sceduling_xpath");
-			wait(1);
-			driver.switchTo().defaultContent();
-			wait(2);
-			
-			if(!isElementPresent("Resource_xpath"))
+			if(!isElementPresent("Resource_css"))
 				reportFailure("Resource is not present by please verify Xpath");
 			
-			click("Resource_xpath");
+			
+			click("Resource_css");
+			wait(1);
+		//	driver.switchTo().defaultContent();
+			wait(2);
+			
+			
+			//click("Resource_xpath");
 			test.log(LogStatus.PASS, "Test ValidateAccessToResourceUnderSales is successfull");
 
 	
@@ -77,18 +80,18 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 		softAssert = new SoftAssert();
 		test= rep.startTest("Validate_NavToSelectedResource_Name_Displayed");
 		test.log(LogStatus.INFO, "Starting the Validate_NavToSelectedResource_Name_Displayed");
-		DefaultLanding();
-		TotalAvailFrames();
-		FrameIndex(0);
+		//DefaultLanding();
+		//TotalAvailFrames();
+		//FrameIndex(0);
 		wait(2);
 	
-		doubleClick("Resource_Name_xpath");
-		DefaultLanding();
+		click("Resource_name_linktext");
+		//DefaultLanding();
 //		driver.switchTo().parentFrame();
-		TotalAvailFrames();
-		SmartFrames(data1.get("Browser")); 
+	//	TotalAvailFrames();
+		//SmartFrames(data1.get("Browser")); 
 		
-		IsDisplayed("Resource_Name_id");
+		//IsDisplayed("Resource_Name_id");
 		test.log(LogStatus.PASS, "Test Validate_NavToSelectedResource_Name_Displayed is successfull");
 	}
 		
@@ -98,6 +101,8 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 			test= rep.startTest("Access_Resource_Resourcelist_Sales");
 			test.log(LogStatus.INFO, "Starting the Access_Resource_Resourcelist_Sales");
 		
+			
+			IsDisplayed("Resource_name_title_xpath");
 		
 	
 		test.log(LogStatus.PASS, "Dependant tests are passes so Access_Resource_Resourcelist_Sales is successfull");
@@ -142,7 +147,13 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		signOut();
+		DefaultLanding();
+		wait(3);
+		click("Profile_New_xpath");
+		wait(2);
+		click("Signout_new_xpath");
+		System.out.println("User have been signout successfully"); 
+		driver.close();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {
