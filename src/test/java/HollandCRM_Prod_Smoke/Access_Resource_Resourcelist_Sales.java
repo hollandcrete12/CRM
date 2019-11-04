@@ -56,8 +56,6 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 			
 			click("Project_Service_xpath");
 			
-			
-			//click("Sales_Dropdown_xpath");
 			wait(3);
 
 			if(!isElementPresent("Resource_css"))
@@ -66,11 +64,7 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 			
 			click("Resource_css");
 			wait(1);
-		//	driver.switchTo().defaultContent();
 			wait(2);
-			
-			
-			//click("Resource_xpath");
 			test.log(LogStatus.PASS, "Test ValidateAccessToResourceUnderSales is successfull");
 
 	

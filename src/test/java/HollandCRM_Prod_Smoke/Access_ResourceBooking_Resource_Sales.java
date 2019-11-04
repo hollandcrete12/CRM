@@ -52,32 +52,36 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 			wait(1);
 			
 			wait(2);
-			click("Sales_Dropdown_xpath");
-			wait(2);
-			click("Resrouce_Sceduling_xpath");
-			test.log(LogStatus.PASS, "User is able to navigate to Resource Tab under Sales Successfully");
+			System.out.println("looking now");
+			click("Next_css");
+			
+		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
+		
+			
+			wait(3);
+
+			if(!isElementPresent("Resource_Scheduling_xpath"))
+				reportFailure("Resource is not present by please verify Xpath");
+			
+			
+			click("Resource_Scheduling_xpath");
+		
+			test.log(LogStatus.PASS, "Test ValidateAccessToResource Scheduling is successfull");
 			}
 	@Test(priority=2)
 	public void Validate_AccessToListofResourceBooking(){
 		softAssert = new SoftAssert();
-		test= rep.startTest("ValidateAccessToResourceUnderSales");
-		test.log(LogStatus.INFO, "Starting the ValidateAccessToResourceUnderSales");
+		test= rep.startTest("ValidateAccessToResource Bookig ");
+		test.log(LogStatus.INFO, "Starting the ValidateAccessToResource Booking ");
 
-		
-	//	DefaultLanding();
 
-		wait(1);
-		DefaultLanding();
-		wait(3);
+		wait(2);
 		
-		if(!isElementPresent("Resource_Booking_xpath"))
+		if(!isElementPresent("Resource_Booking_new_xpath"))
 			reportFailure("Resource is not present by please verify Xpath");
-		click("Resource_Booking_xpath");
+		click("Resource_Booking_new_xpath");
 		
-		test.log(LogStatus.PASS, "Test Validate_AccessToListofResourceBooking is successfull");
-		
-		
-	//	driver.findElement(By.xpath("//*[@id='{4F49784E-7370-4441-B54E-BF7BE616F312}']/a[2]/span/nobr")).click();
+		test.log(LogStatus.PASS, "Test Validate_Access To List of Resource Booking is successfull");
 	
 	}		
 	@Test(priority=3,dataProvider="getData")
@@ -86,27 +90,16 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 		test= rep.startTest("Validate_NavToSelected_Booking");
 		test.log(LogStatus.INFO, "Starting the Validate_NavToSelected_Booking");
 		
-	    DefaultLanding();
-	    FrameIndex(0);
 	    
-	    String Name=getElement("ResourceBooking_xpath").getText();
+		wait(2);
+		
+		if(!isElementPresent("Resource_Booking_name_linktext"))
+			reportFailure("Resource_Booking_name_linktext is not present by please verify Xpath");
+		click("Resource_Booking_name_linktext");
 	    
-	//	String Name=driver.findElement(By.xpath("//tr[4]/td[2]/nobr/a/li/span/span/span[2]")).getText();
-		System.out.println(Name);
-		wait(3);
-		click("ResourceBooking_xpath");
-		wait(1);
-		DefaultLanding();
-
-		TotalAvailFrames();
-		SmartFrames(data1.get("Browser")); 
+		
 	
-		String DName=getElement("ResourceBookingName_id").getText();
-		//String DName=driver.findElement(By.id("Name_label")).getText();
-
-			String General = driver.findElement(By.linkText(Name)).getText();
-		System.out.println(General);  
-		assertTrue(DName.equals(Name));
+	
 		
 		test.log(LogStatus.PASS, "Test Validate_NavToSelected_Booking is successfull");
 		
@@ -116,6 +109,15 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 		softAssert = new SoftAssert();
 		test= rep.startTest("Access_ResourceBooking_Resource_Sales");
 		test.log(LogStatus.INFO, "Starting the Access_ResourceBooking_Resource_Sales");
+		
+		wait(2);
+		
+		if(!isElementPresent("Resource_Booking_name_property_id"))
+			reportFailure("Resource_Booking_name_property_id is not present by please verify Xpath");
+		click("Resource_Booking_name_property_id");
+	    
+		
+	
 	
 		test.log(LogStatus.PASS, "Dependant tests are successful so Access_ResourceBooking_Resource_Sales is successfull");
 		
@@ -134,7 +136,17 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		signOut();
+		
+		
+		DefaultLanding();
+		wait(3);
+		click("Profile_New_xpath");
+		wait(2);
+		click("Signout_new_xpath");
+		System.out.println("User have been signout successfully"); 
+		driver.close();
+		
+		
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {
