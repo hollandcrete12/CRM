@@ -51,35 +51,18 @@ public class ContactContactlistUnderSales extends BaseTest {
 
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
+
 			wait(2);
+			click("Next_css");
 			
-			DefaultLanding();
-			wait(2);
-			click("Sales_Dropdown_xpath");
-			wait(5);
-			click("Contact_xpath");
-			wait(1);
-			DefaultLanding();
-			FrameIndex(0);
-		//	driver.switchTo().frame(0);
-			wait(3);
+		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
 			
-			click("AllContact_xpath");
-			wait(2);
-	//		driver.findElement(By.xpath("//*[@id='crmGrid_SavedNewQuerySelector']")).click();
+			if(!isElementPresent("Holland_xpath"))
+				reportFailure("Holland is not present by please verify Xpath");
 			
-		//	click("SelectContact_xpath");
+			click("Holland_xpath");
 			
-			driver.findElement(By.xpath("//*[@id='{0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC105}']/a[2]/span/nobr")).click();
-			wait(2);
-			click("SelectContact1_xpath");
-		//	driver.findElement(By.xpath("//*[@id='gridBodyTable']/tbody/tr[2]/td[2]/nobr")).click();
-			wait(2);
-			doubleClick("SelectContact2_xpath");
-			//driver.findElement(By.xpath("//*[@id='gridBodyTable_primaryField_{09193D4E-4FC9-E711-A954-000D3A18032D}_1']/span")).click();
-			
-			
-			test.log(LogStatus.PASS, "Test AccessToContactListUnderSales Passed");
+			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");
 		
 	}
 	@Test(priority=2,dataProvider="getData",dependsOnMethods={"AccessToContactListUnderSales"})
@@ -88,18 +71,55 @@ public class ContactContactlistUnderSales extends BaseTest {
 		test= rep.startTest("GeneralInformation_Displayed_ContactListUnderSales");
 		test.log(LogStatus.INFO, "Starting the GeneralInformation_Displayed_ContactListUnderSales");
 		DefaultLanding();
-		TotalAvailFrames();
+
 		
-		String IName=driver.findElement(By.tagName("Iframe")).getText();
-		System.out.println(IName); 
+		
+		
+		ScrollToElement("Contact_xpath");
+		
+		if(!isElementPresent("Contact_xpath"))
+			reportFailure("Contact is not present by please verify the locator property");
+		
+	
+		wait(2);
+		click("Contact_xpath");
+		wait(1);
 		
 
-		SmartFrames(data1.get("Browser"));  
-
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(getElement("ContactGeneralInformation_xpath")));
-		//wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id='general information_c']"))));
+		test.log(LogStatus.PASS, "Test Navigate to Contact is Successfull");
 		
+	}	
+	
+	@Test(priority=3,dependsOnMethods={"GeneralInformation_Displayed_ContactListUnderSales"})
+	public void FirstName_LastName_Displayed_ContactContactListGeneralInformation(){
+		softAssert = new SoftAssert();
+		test= rep.startTest("FirstName_LastName_Displayed_ContactContactListGeneralInformation");
+		test.log(LogStatus.INFO, "Starting the FirstName_LastName_Displayed_ContactContactListGeneralInformation");
+		
+		
+		if(!isElementPresent("Contact_select_linktext"))
+			reportFailure("Unable to select a contact please verify the locator ");
+		
+		wait(2);
+		click("Contact_select_linktext");
+		
+		
+		test.log(LogStatus.PASS, " Naivigattion to general information page of selected contact is successfull");
+		
+		
+		
+	}
+	
+	@Test(priority=4,dependsOnMethods={"FirstName_LastName_Displayed_ContactContactListGeneralInformation"})
+	public void ContactContactlistUnderSales(){
+		softAssert = new SoftAssert();
+		test= rep.startTest("ContactContactlistUnderSales");
+		test.log(LogStatus.INFO, "Starting the ContactContactlistUnderSales");
+		
+		WebElement Name=getElement("Contact_h1_xpath");
+		Boolean checkLastNameDisplayed = Name.getText().matches("Aaron C Dodrill");
+		System.out.println(Name);
+	
 		
 		WebElement GeneralInformation = getElement("ContactGeneralInformation_xpath");
 		Boolean checGeneralInfoIsDisplayed = GeneralInformation.isDisplayed();
@@ -109,41 +129,7 @@ public class ContactContactlistUnderSales extends BaseTest {
 			reportFailure("General Informations is not displayed" );
 		}
 		
-		String GeneralInfo = getElement("ContactGeneralInformation_xpath").getText();
-		System.out.println(GeneralInfo);
-		assertTrue(GeneralInfo.equals("GENERAL INFORMATION"));
 		
-		IsDisplayed("ContactGeneralInformation_xpath");
-		
-		test.log(LogStatus.PASS, "Test GeneralInformation_Displayed_ContactListUnderSales Passed");
-	}	
-	
-	@Test(priority=3,dependsOnMethods={"GeneralInformation_Displayed_ContactListUnderSales"})
-	public void FirstName_LastName_Displayed_ContactContactListGeneralInformation(){
-		softAssert = new SoftAssert();
-		test= rep.startTest("FirstName_LastName_Displayed_ContactContactListGeneralInformation");
-		test.log(LogStatus.INFO, "Starting the FirstName_LastName_Displayed_ContactContactListGeneralInformation");
-		
-		String FirstName1 = getElement("FirstName_xpath").getText();
-		assertTrue(FirstName1.equals("Josh"));
-		
-		WebElement LastName=getElement("LastName_xpath");
-		Boolean checkLastNameDisplayed = LastName.getText().matches("Bullock");
-		System.out.println(LastName);
-		
-		IsDisplayed("FirstName_xpath");
-		IsDisplayed("LastName_xpath");
-		
-		test.log(LogStatus.PASS, "Test FirstName_LastName_Displayed_ContactContactListGeneralInformation Passed");
-		
-	}
-	
-	@Test(priority=4,dependsOnMethods={"FirstName_LastName_Displayed_ContactContactListGeneralInformation"})
-	public void ContactContactlistUnderSales(){
-		softAssert = new SoftAssert();
-		test= rep.startTest("ContactContactlistUnderSales");
-		test.log(LogStatus.INFO, "Starting the ContactContactlistUnderSales");
-	
 		test.log(LogStatus.PASS, "Dependant tests are successful so ContactContactlistUnderSales is successfull");
 		
 	}
@@ -163,7 +149,13 @@ public class ContactContactlistUnderSales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		signOut();
+		DefaultLanding();
+		wait(3);
+		click("Profile_New_xpath");
+		wait(2);
+		click("Signout_new_xpath");
+		System.out.println("User have been signout successfully"); 
+		driver.close();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

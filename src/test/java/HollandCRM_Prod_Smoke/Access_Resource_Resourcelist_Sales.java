@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -45,19 +46,17 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
-			wait(1);
-			
 			
 			wait(2);
-			System.out.println("looking now");
 			click("Next_css");
 			
 		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
 			
-			click("Project_Service_xpath");
+			click("Holland_xpath");
 			
-			wait(3);
+			ScrollToElement("Resource_css");
 
+			wait(3);
 			if(!isElementPresent("Resource_css"))
 				reportFailure("Resource is not present by please verify Xpath");
 			

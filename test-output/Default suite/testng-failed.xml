@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales">
+      <class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales">
         <methods>
+          <include name="Access_Project_Projectlist_Sales" invocation-numbers="0"/>
           <include name="init"/>
           <include name="quit"/>
-          <include name="Access_ResourceBooking_Resource_Sales"/>
-          <include name="Validate_AccessToListofResourceBooking"/>
-          <include name="Validate_NavToSelected_Booking" invocation-numbers="0"/>
         </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales -->
+      </class> <!-- HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

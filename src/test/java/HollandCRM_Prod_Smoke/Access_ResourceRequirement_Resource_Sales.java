@@ -47,40 +47,47 @@ public class Access_ResourceRequirement_Resource_Sales extends BaseTest {
 			openBrowser(data1.get("Browser"));
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
-			wait(3);
-			click("Sales_Dropdown_xpath");
-			wait(5);
-			click("Resrouce_Sceduling_xpath");
 			wait(1);
-			DefaultLanding();
-			wait(3);
-			click("Resource_Requirement_xpath");
-			test.log(LogStatus.PASS, "User is able to navigate to Requirement Tab under Sales Successfully");
+			
+			wait(2);
+			click("Next_css");
+			
+		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
+			
+			if(!isElementPresent("Holland_xpath"))
+				reportFailure("Holland is not present by please verify Xpath");
+			
+			click("Holland_xpath");
+			
+			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");
 	}
+	
 	@Test(priority=2,dataProvider="getData")
 	public void Validate_NavToSelected_Requirement(Hashtable<String,String> data1){
 		softAssert = new SoftAssert();
 		test= rep.startTest("Validate_2NavToSelected_Requirement");
 		test.log(LogStatus.INFO, "Starting the Validate_2NavToSelected_Requirement");
 
-		DefaultLanding();
-		FrameIndex(0);
 		
-		String Name=getElement("ResourceReqName_xpath").getText();
-		System.out.println(Name);
-		wait(3);
+		
+		
+		wait(2);
+		
+		ScrollToElement("ResourceRequirementSelect_xpath");
+		
+		if(!isElementPresent("ResourceRequirementSelect_xpath"))
+			reportFailure("Resource Requirement is not present by please verify Xpath");
 		click("ResourceRequirementSelect_xpath");
-		wait(1);
-		DefaultLanding();
-		TotalAvailFrames();
-		SmartFrames(data1.get("Browser")); 
+		
+		test.log(LogStatus.PASS, "Test Validate_Access To List of Resource Booking is successfull");
+	
+	
+		//String DName=getElement("DName_id").getText();
+		//System.out.println(DName);
 
-		String DName=getElement("DName_id").getText();
-		System.out.println(DName);
-
-		assertTrue(DName.equals(Name));
-		IsDisplayed("DName_id");
-		test.log(LogStatus.PASS, "Test Validate_NavToSelected_Requirement Successfully");
+	//	assertTrue(DName.equals(Name));
+	//	IsDisplayed("DName_id");
+	
 	}	
 	
 	@Test(priority=3)
@@ -88,7 +95,33 @@ public class Access_ResourceRequirement_Resource_Sales extends BaseTest {
 		softAssert = new SoftAssert();
 		test= rep.startTest("Access_ResourceBooking_Resource_Sales");
 		test.log(LogStatus.INFO, "Starting the Access_ResourceRequirement_Resource_Sales");
+		
+		wait(2);
+		
+		if(!isElementPresent("ResourceReqName_linktext"))
+			reportFailure("Resource Requirement is not present by please verify Xpath");
+		click("ResourceReqName_linktext");
+	    
+		
+		
+		test.log(LogStatus.PASS, "Dependant tests are successful so Access_ResourceRequirement_Resource_Sales is successfull");
+		
+	}
 	
+	@Test(priority=4)
+	public void Access_ResourceRequirement_PropertyPage(){
+		softAssert = new SoftAssert();
+		test= rep.startTest("Access_ResourceRequirement_PropertyPage");
+		test.log(LogStatus.INFO, "Starting the Access_ResourceRequirement_PropertyPage");
+		
+		wait(2);
+		
+		if(!isElementPresent("ResrourceRequirmentProp_xpath"))
+			reportFailure("Resource Requirement Property element is not present by please verify Xpath");
+		click("ResrourceRequirmentProp_xpath");
+	    
+		
+		
 		test.log(LogStatus.PASS, "Dependant tests are successful so Access_ResourceRequirement_Resource_Sales is successfull");
 		
 	}
@@ -109,7 +142,14 @@ public class Access_ResourceRequirement_Resource_Sales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		signOut();
+		DefaultLanding();
+		wait(3);
+		click("Profile_New_xpath");
+		wait(2);
+		click("Signout_new_xpath");
+		System.out.println("User have been signout successfully"); 
+		driver.close();
+	//	signOut();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

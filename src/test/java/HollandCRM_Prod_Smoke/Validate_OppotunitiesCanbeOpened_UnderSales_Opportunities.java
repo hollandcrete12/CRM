@@ -52,7 +52,16 @@ public class Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities extends B
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
 			wait(2);
-			test.log(LogStatus.PASS, "Test Validate_AccessToListofOpportunities Passed");
+			
+			click("Next_css");
+			wait(2);
+			if(!isElementPresent("Holland_xpath"))
+				reportFailure("Holland is not present by please verify Xpath");
+			
+			click("Holland_xpath");
+			
+			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");
+			
 	}	
 			
 	@Test(priority=2,dataProvider="getData")
@@ -61,34 +70,33 @@ public class Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities extends B
 		test= rep.startTest("GeneralInformation_Displayed_ContactListUnderSales");
 		test.log(LogStatus.INFO, "Starting the GeneralInformation_Displayed_ContactListUnderSales");
 		
-		if(!DataUtil.isRunnable(testCaseName, xls) || data.get("Runmode").equals("N")) {
-			test.log(LogStatus.SKIP, "Skipping the test as Runmode is N");
-			throw new SkipException("Skipping the test as runmode is N");
-		}	
+	
+		
+		ScrollToElement("Opportunities_xpath");
+		
+		if(!isElementPresent("Opportunities_xpath"))
+			reportFailure("Opportunities  is not present by please verify Xpath");
+		click("Opportunities_xpath");
+		
+		
+		
+		
+			//if(!isElementPresent("Opport_Select_css"))
+			//reportFailure("Opportunities  Down/Selection is not present by please verify the property");
+			click("Opport_Select_xpath");
+			
+			if(!isElementPresent("Oppor_All_xpath"))
+				reportFailure("All Opportunities  is not present in dropdown please verify Xpath");
+				click("Oppor_All_xpath");
+				
 			
 			
-			driver.switchTo().defaultContent();
-			click("Sales_Dropdown_xpath");
-			wait(5);
-			click("Opportunities_UnderSales_xpath");
-			wait(1);
-			driver.switchTo().defaultContent();
-			driver.switchTo().frame(0);
-			wait(3);
-			click("Nav_All_Open_Closed_And_xpath");
-			driver.findElement(By.xpath("//*[@id='{7F7FB7D5-4863-E711-80FB-5065F38B8481}']/a[2]/span/nobr")).click();
-		//	driver.switchTo().frame(2);
-			driver.findElement(By.xpath("//*[@id='gridBodyTable']/tbody/tr[6]/td[2]")).click();
-			
-		//	driver.findElement(By.xpath("//*[@id='gridBodyTable_primaryField_{3AA916E1-7E4D-E811-A960-000D3A1A9EFB}_5']")).click();
-			
-			driver.switchTo().parentFrame();
-			int total = driver.findElements(By.tagName("iframe")).size();
-			System.out.println("Total frames - "+ total);	
-			driver.switchTo().frame(1);
-			String Oppotunity = driver.findElement(By.xpath("//*[@id='header_crmFormSelector']/nobr/span")).getText();
+			String Oppotunity = driver.findElement(By.xpath("//a[contains(text(),'LIRR 3 year')]")).getText();
 			System.out.println(Oppotunity);
-	//		assertTrue(Oppotunity.equals("OPPORTUNITY"));
+			assertTrue(Oppotunity.equals("LIRR 3 year"));
+			
+			click("Oppor_LIRR_xpath");
+			
 			test.log(LogStatus.PASS, "Test Validate_OpportunitySelected_Name_Displayed Passed");
 			
 			
@@ -99,12 +107,12 @@ public class Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities extends B
 	@Test(priority=3) 
 	public void Validate_AccountName_Displayed_AccountListUnderSales4() {
 		
-		WebElement AccountName1=driver.findElement(By.xpath("//*[@id='name']/div[1]"));
-		String AccountName = driver.findElement(By.xpath("//*[@id='name']/div[1]")).getText();
+		WebElement AccountName1=driver.findElement(By.xpath("//*[@id=\"id-a837e4a7-01b8-4f82-a475-be9abd67e667-1-name8-name.fieldControl-text-box-text\"]"));
+	//	String AccountName = driver.findElement(By.xpath("//*[@id='name']/div[1]")).getText();
 		
 	//	assertTrue(AccountName.equals("Adkins Energy"));
-		Boolean checkAccountInfoIsDisplayed2 = AccountName1.getText().matches("Adkins Energy");
-		System.out.println(AccountName);
+		Boolean checkAccountInfoIsDisplayed2 = AccountName1.getText().matches("LIRR 3 year");
+	//	System.out.println(AccountName);
 		
 		test.log(LogStatus.PASS, "Test Validate_AccountName_Displayed_AccountListUnderSales4 Passed");
 	}
@@ -117,8 +125,13 @@ public class Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities extends B
 	}
 
 	@AfterTest
-	public void quit(){
-		signOut();
+	public void quit(){DefaultLanding();
+	wait(3);
+	click("Profile_New_xpath");
+	wait(2);
+	click("Signout_new_xpath");
+	System.out.println("User have been signout successfully"); 
+	driver.close();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

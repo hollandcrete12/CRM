@@ -49,18 +49,21 @@ public class Access_ResourceSkill_Resourcelist_Sales extends BaseTest {
 
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
-			wait(2);
 			
-			DefaultLanding();
-			wait(2);
-			click("Sales_Dropdown_xpath");
-			wait(3);
-			click("Resrouce_Sceduling_xpath");
 			wait(1);
-			DefaultLanding();
-			wait(3);
-			click("Resource_Skill_xpath");
-			test.log(LogStatus.PASS, "Test Access_ResourceSkill_Sales is Successfull");
+			
+			wait(2);
+			click("Next_css");
+			
+		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
+			
+			if(!isElementPresent("Holland_xpath"))
+				reportFailure("Holland is not present by please verify Xpath");
+			
+			click("Holland_xpath");
+			
+			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");
+			
 			}
 	@Test(priority=2,dataProvider="getData",dependsOnMethods={"Access_ResourceSkill_Sales"})
 	public void Validate_NavToSelectedResourceskill(Hashtable<String,String> data1){
@@ -68,26 +71,17 @@ public class Access_ResourceSkill_Resourcelist_Sales extends BaseTest {
 		test= rep.startTest("Validate_NavToSelectedResourceskill");
 		test.log(LogStatus.INFO, "Starting the Validate_NavToSelectedResourceskill");
 
-		DefaultLanding();
-	    FrameIndex(0);
-
-	    String Name=getElement("ResourceSkill_id").getText();
-	    System.out.println(Name);
+		ScrollToElement("ResourceSkill_xpath");
+		
+		if(!isElementPresent("ResourceSkill_xpath"))
+			reportFailure("Resource Skill  is not present by please verify Xpath");
+		
+	
 		wait(2);
-		click("ResourceSkill_id");
+		click("ResourceSkill_xpath");
 		wait(1);
-		driver.switchTo().parentFrame();
-
-		TotalAvailFrames();
-		
-		SmartFrames(data1.get("Browser")); 
-		String General = getElement("ResourceSkillName_xpath").getText();
-		System.out.println(General);
-		assertTrue(General.equals(Name));
 		
 
-		IsDisplayed("ResourceSkillName_xpath");
-		
 		test.log(LogStatus.PASS, "Test Validate_NavToSelectedResourceskill is Successfull");
 	}		
 	
@@ -97,7 +91,33 @@ public class Access_ResourceSkill_Resourcelist_Sales extends BaseTest {
 		test= rep.startTest("Access_ResourceSkill_Resourcelist_Sales");
 		test.log(LogStatus.INFO, "Starting the Access_ResourceSkill_Resourcelist_Sales");
 	
-		test.log(LogStatus.PASS, "Dependant tests are successful so Access_ResourceSkill_Resourcelist_Sales is successfull");
+		
+		if(!isElementPresent("Resourceskillselect_linktext"))
+			reportFailure("Resource Skill  is not present by please verify Xpath");
+		
+		wait(2);
+		click("Resourceskillselect_linktext");
+		
+		
+		test.log(LogStatus.PASS, " Access_ResourceSkill_Resourcelist_Sales is successfull");
+		
+	}
+	
+	@Test(priority=4,dependsOnMethods={"Validate_NavToSelectedResourceskill"})
+	public void Access_ResourceSkill_PropertyPage_Sales(){
+		softAssert = new SoftAssert();
+		test= rep.startTest("Access_ResourceSkill_PropertyPage_Sales");
+		test.log(LogStatus.INFO, "Starting the Access_ResourceSkill_Resourcelist_Sales");
+	
+		
+		if(!isElementPresent("Resourceskillanding_Desription_xpath"))
+			reportFailure("Resource Skill Description is not present by please verify Xpath");
+		
+		wait(2);
+		click("Resourceskillanding_Desription_xpath");
+		
+		
+		test.log(LogStatus.PASS, " Access_ResourceSkill_PropertyPage_Sales is successfull");
 		
 	}
 	
@@ -117,7 +137,13 @@ public class Access_ResourceSkill_Resourcelist_Sales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		signOut();
+		DefaultLanding();
+		wait(3);
+		click("Profile_New_xpath");
+		wait(2);
+		click("Signout_new_xpath");
+		System.out.println("User have been signout successfully"); 
+		driver.close();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

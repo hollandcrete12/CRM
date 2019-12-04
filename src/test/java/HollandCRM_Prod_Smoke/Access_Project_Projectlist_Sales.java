@@ -49,33 +49,32 @@ public class Access_Project_Projectlist_Sales extends BaseTest {
 			
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
 			test.log(LogStatus.INFO, "Login Successful");
-
-			DefaultLanding();
-			wait(3);
+			wait(2);
+			click("Next_css");
 			
-			click("Sales_Dropdown_xpath");
-			test.log(LogStatus.INFO, "User is able to click on Sales");
-			wait(4);
+			if(!isElementPresent("Holland_xpath"))
+				reportFailure("Holland is not present please verify Xpath");
+			click("Holland_xpath");
+			
 			
 			click("Projects_UnderSales_xpath");
 			wait(1);
-			DefaultLanding();	
-			FrameIndex(0);
+			
 			wait(3);
-			click("Nav_All_Open_Closed_And_xpath");
+			click("Project_DropDown_xpath");
+			wait(1);
 			
-			
-			click("ProjectSelect_xpath");
+			click("All_Project_drop_xpath");
 			wait(3);
-			//click("ProjectName_xpath");
-			click("ProjectName_xpath");
-			doubleClick("ProjectNamecheckbox_xpath");
 			
-			DefaultLanding();
-			TotalAvailFrames();
-		//	driver.switchTo().frame(0);
-			SmartFrames(data1.get("Browser")); 
-			IsDisplayed("ProjectSummaryTitle_xpath");
+		
+			click("ProjectSelect_New_xpath");
+			wait(3);
+		//	doubleClick("ProjectSelect_New_xpath");
+			
+
+	
+	
 			
 			test.log(LogStatus.PASS, "Test Access_Project_Projectlist_Sales Passed");
 		
@@ -95,7 +94,13 @@ public class Access_Project_Projectlist_Sales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		signOut();
+		DefaultLanding();
+		wait(3);
+		click("Profile_New_xpath");
+		wait(2);
+		click("Signout_new_xpath");
+		System.out.println("User have been signout successfully"); 
+		driver.close();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {
@@ -109,8 +114,6 @@ public class Access_Project_Projectlist_Sales extends BaseTest {
 		if(driver!=null)
 			driver.quit();
 	}
-
-
 @DataProvider(parallel=true)
 public Object[][] getData() throws IOException{
 	init();

@@ -44,29 +44,22 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 			test.log(LogStatus.INFO, data1.toString());
 
 			openBrowser(data1.get("Browser"));
-			
-			
-
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
 			wait(1);
 			
 			wait(2);
-			System.out.println("looking now");
 			click("Next_css");
 			
 		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
-		
 			
-			wait(3);
+			if(!isElementPresent("Holland_xpath"))
+				reportFailure("Holland is not present by please verify Xpath");
+			
+			click("Holland_xpath");
+			
 
-			if(!isElementPresent("Resource_Scheduling_xpath"))
-				reportFailure("Resource is not present by please verify Xpath");
-			
-			
-			click("Resource_Scheduling_xpath");
-		
-			test.log(LogStatus.PASS, "Test ValidateAccessToResource Scheduling is successfull");
+			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");
 			}
 	@Test(priority=2)
 	public void Validate_AccessToListofResourceBooking(){
@@ -77,9 +70,11 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 
 		wait(2);
 		
-		if(!isElementPresent("Resource_Booking_new_xpath"))
-			reportFailure("Resource is not present by please verify Xpath");
-		click("Resource_Booking_new_xpath");
+		ScrollToElement("Resource_Booking_xpath");
+		
+		if(!isElementPresent("Resource_Booking_xpath"))
+			reportFailure("Resource Booking is not present by please verify Xpath");
+		click("Resource_Booking_xpath");
 		
 		test.log(LogStatus.PASS, "Test Validate_Access To List of Resource Booking is successfull");
 	
@@ -101,7 +96,7 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 	
 	
 		
-		test.log(LogStatus.PASS, "Test Validate_NavToSelected_Booking is successfull");
+		test.log(LogStatus.PASS, "Test clicking on one of the Resource Booking is successfull");
 		
 	}
 	@Test(priority=4)
@@ -118,7 +113,7 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 	    
 		
 	
-	
+		test.log(LogStatus.PASS, "Able to Navigate to the Landing page of Resource Booking is successfull");
 		test.log(LogStatus.PASS, "Dependant tests are successful so Access_ResourceBooking_Resource_Sales is successfull");
 		
 	}

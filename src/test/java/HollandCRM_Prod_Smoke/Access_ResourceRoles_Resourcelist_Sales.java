@@ -49,15 +49,19 @@ public class Access_ResourceRoles_Resourcelist_Sales extends BaseTest {
 
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
-			wait(3);
-			click("Sales_Dropdown_xpath");
-			wait(5);
-			click("Resrouce_Sceduling_xpath");
 			wait(1);
-			DefaultLanding();
-			wait(5);
-			click("Resource_Roles_xpath");
-			test.log(LogStatus.PASS, "Test Access_Resourcelist_Sales is successfull");
+			
+			wait(2);
+			click("Next_css");
+			
+		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
+			
+			if(!isElementPresent("Holland_xpath"))
+				reportFailure("Holland is not present by please verify Xpath");
+			
+			click("Holland_xpath");
+			
+			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");
 		}
 	@Test(priority=2,dataProvider="getData")
 	public void Validate_NavToSelectedProject_Name_Displayed(Hashtable<String,String> data1){
@@ -65,17 +69,22 @@ public class Access_ResourceRoles_Resourcelist_Sales extends BaseTest {
 		test= rep.startTest("Validate_2NavToSelectedProject_Name_Displayed");
 		test.log(LogStatus.INFO, "Starting the Validate_2NavToSelectedProject_Name_Displayed");
 
-		DefaultLanding();
-	    FrameIndex(0);
-
-		String Name=getElement("ResourcerolesName_xpath").getText();
-		System.out.println(Name);
-		wait(3);
-		click("ResourcerolesName_xpath");
-		wait(1);
-		DefaultLanding();
-
-		TotalAvailFrames();
+		
+		
+		wait(2);
+		
+		ScrollToElement("ResourceRolesMain_xpath");
+		
+		if(!isElementPresent("ResourceRolesMain_xpath"))
+			reportFailure("Resource Roles is not present by please verify Xpath");
+		click("ResourceRolesMain_xpath");
+		
+		test.log(LogStatus.PASS, "Test Validate_Access To List of Resource Roles is successfull");
+	
+		
+		
+		
+	/*	
 //	String General1=getElement("ResourceName_linktext").getText();
 		String General = driver.findElement(By.linkText(Name)).getText();
 		System.out.println(General);
@@ -83,8 +92,42 @@ public class Access_ResourceRoles_Resourcelist_Sales extends BaseTest {
 		assertTrue(General.equals(Name));
 
 		
-		test.log(LogStatus.PASS, "Test Validate_NavToSelectedProject_Name_Displayed is successfull");
-	}		
+		test.log(LogStatus.PASS, "Test Validate_NavToSelectedProject_Name_Displayed is successfull");*/
+	}	
+	
+	@Test(priority=3,dataProvider="getData")
+	public void Validate_NavToSelectedRoles(Hashtable<String,String> data1){
+		softAssert = new SoftAssert();
+		test= rep.startTest("Validate_NavToSelectedRoles");
+		test.log(LogStatus.INFO, "Starting the Validate_NavToSelectedRoles");
+
+		
+		ScrollToElement("RolesAdminiAssistant_linktext");
+		
+		if(!isElementPresent("RolesAdminiAssistant_linktext"))
+			reportFailure("Resource Role Administation Assistant is not present by please verify Xpath");
+		click("RolesAdminiAssistant_linktext");
+		
+		test.log(LogStatus.PASS, "Test Validate_Access To List of Resource Roles is successfull");
+	
+	}	
+	
+	@Test(priority=4,dataProvider="getData")
+	public void Validate_NavToSelectedRolesLandingPage(Hashtable<String,String> data1){
+		softAssert = new SoftAssert();
+		test= rep.startTest("Validate_NavToSelectedRolesLandingPage");
+		test.log(LogStatus.INFO, "Starting the Validate_NavToSelectedRolesLandingPage");
+
+		
+		ScrollToElement("RolesLandingProp_xpath");
+		
+		if(!isElementPresent("RolesLandingProp_xpath"))
+			reportFailure("Resource Role Administation Assistant Landing Page is not present by please verify Xpath");
+		click("RolesLandingProp_xpath");
+		
+		test.log(LogStatus.PASS, "Test Resource Role Administation Assistant Landing Page is successfull");
+	
+	}	
 	
 	@BeforeMethod
 	public void init() {
@@ -102,7 +145,13 @@ public class Access_ResourceRoles_Resourcelist_Sales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		signOut();
+		DefaultLanding();
+		wait(3);
+		click("Profile_New_xpath");
+		wait(2);
+		click("Signout_new_xpath");
+		System.out.println("User have been signout successfully"); 
+		driver.close();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

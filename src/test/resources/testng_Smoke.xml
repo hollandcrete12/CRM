@@ -43,7 +43,7 @@
 	
 		<test name="Test7" allow-return-values="true">
 		<classes>
-			<class name="HollandCRM_Prod_Smoke.AccountInformationUnderSales" />
+			<class name="HollandCRM_Prod_Smoke.CustomerInformationUnderSales" />
 		</classes>
 	</test>
 	

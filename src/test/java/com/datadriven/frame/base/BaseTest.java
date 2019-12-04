@@ -184,6 +184,23 @@ public class BaseTest {
 		test.log(LogStatus.INFO, "Doubleclicked successfully on "+locatorKey);
 	}
 	
+	public void ScrollToElement(String locatorKey) {
+		try {
+			wait(2);
+			Actions actions = new Actions(driver);
+			actions.moveToElement(getElement(locatorKey));
+			actions.perform();
+			test.log(LogStatus.INFO, "Scroll to Element successfully on "+locatorKey);
+			}
+			catch(Exception ex){
+			// fail the test and report the error
+			reportFailure(ex.getMessage());
+			ex.printStackTrace();
+			Assert.fail("Failed the test - "+ex.getMessage());
+			
+		}
+		}
+	
 	public WebElement getText_byxpath(String locatorKey) {
 		try{
 			return driver.findElement(By.xpath(prop.getProperty(locatorKey)));

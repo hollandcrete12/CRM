@@ -28,7 +28,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 
 
-public class AccountInformationUnderSales extends BaseTest {
+public class CustomerInformationUnderSales extends BaseTest {
 	String testCaseName="AccountInformationUnderSales";
 	SoftAssert softAssert; 
 	Xls_Reader xls;
@@ -51,22 +51,18 @@ public class AccountInformationUnderSales extends BaseTest {
 
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
+
 			wait(2);
+			click("Next_css");
 			
-			DefaultLanding();
+		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
 			
-			wait(2);
-			click("Sales_Dropdown_xpath");
-			wait(5);
-			click("Account_xpath");
-			wait(1);
-			FrameIndex(0);
-			click("AllAccount_xpath");
-			click("SelectAccount_xpath");
-			click("SelectAccount1_xpath");
-			click("SelectAccount2_xpath");
+			if(!isElementPresent("Holland_xpath"))
+				reportFailure("Holland is not present by please verify Xpath");
 			
-			test.log(LogStatus.PASS, "Test Validate_AccessToAccountListUnderSales is successfull");
+			click("Holland_xpath");
+			
+			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");
 		
 	}
 	@Test(priority=2,dataProvider="getData")
@@ -75,12 +71,38 @@ public class AccountInformationUnderSales extends BaseTest {
 		test= rep.startTest("GeneralInformation_Displayed_ContactListUnderSales");
 		test.log(LogStatus.INFO, "Starting the GeneralInformation_Displayed_ContactListUnderSales");
 		
-		DefaultLanding();
-		TotalAvailFrames();
+		ScrollToElement("Customer_xpath");
 		
+		if(!isElementPresent("Customer_xpath"))
+			reportFailure("Customer is not present by please verify the locator property");
+		
+	
+		wait(2);
+		click("Customer_xpath");
+		
+		
+		if(!isElementPresent("Customer_Dropdown_xpath"))
+			reportFailure("Customer Dropdown is not present by please verify the locator property");
+		
+	
+		wait(2);
+		click("Customer_Dropdown_xpath");
+		
+		
+		if(!isElementPresent("AllAccount_xpath"))
+			reportFailure("All Account under customer is not present by please verify the locator property");
+		wait(2);
+		click("AllAccount_xpath");
+			
+		if(!isElementPresent("Customer_linktext"))
+			reportFailure("Customer_linktext is not present by please verify the locator property");
+		wait(2);
+		click("Customer_linktext");
+		
+		/*
 		String IName=driver.findElement(By.tagName("Iframe")).getText();
 		System.out.println(IName);
-		SmartFrames(data1.get("Browser"));  
+		SmartFrames(data1.get("Browser"));  */
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id='account information_c']"))));
