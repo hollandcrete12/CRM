@@ -3,7 +3,6 @@
 
 <suite name="SuiteName" parallel="tests">
 	
-	
 	<test name="Test1" allow-return-values="true">
 		<classes>
 			<class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales" />
