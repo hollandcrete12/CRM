@@ -1,188 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [SuiteName]" guice-stage="DEVELOPMENT">
-  <test parallel="tests" name="Test3(failed)">
-    <classes>
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="Access_ResourceBooking_Resource_Sales"/>
-          <include name="Validate_NavToSelected_Booking" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.CustomerInformationUnderSales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.CustomerInformationUnderSales -->
-      <class name="HollandCRM_Prod_Smoke.ContactContactlistUnderSales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.ContactContactlistUnderSales -->
-      <class name="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales -->
-    </classes>
-  </test> <!-- Test3(failed) -->
-  <test parallel="tests" name="Test8(failed)">
-    <classes>
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.ContactContactlistUnderSales">
-        <methods>
-          <include name="ContactContactlistUnderSales"/>
-          <include name="GeneralInformation_Displayed_ContactListUnderSales"/>
-          <include name="FirstName_LastName_Displayed_ContactContactListGeneralInformation"/>
-          <include name="quit"/>
-          <include name="AccessToContactListUnderSales" invocation-numbers="0"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.ContactContactlistUnderSales -->
-      <class name="HollandCRM_Prod_Smoke.CustomerInformationUnderSales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.CustomerInformationUnderSales -->
-      <class name="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales -->
-    </classes>
-  </test> <!-- Test8(failed) -->
-  <test parallel="tests" name="Test9(failed)">
-    <classes>
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales -->
-      <class name="HollandCRM_Prod_Smoke.CustomerInformationUnderSales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.CustomerInformationUnderSales -->
-      <class name="HollandCRM_Prod_Smoke.ContactContactlistUnderSales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.ContactContactlistUnderSales -->
-      <class name="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities">
-        <methods>
-          <include name="Validate_OpportunitySelected_Name_Displayed" invocation-numbers="0"/>
-          <include name="Validate_AccountName_Displayed_AccountListUnderSales4"/>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities -->
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales -->
-    </classes>
-  </test> <!-- Test9(failed) -->
   <test parallel="tests" name="Test7(failed)">
     <classes>
       <class name="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales">
@@ -209,6 +27,12 @@
           <include name="init"/>
         </methods>
       </class> <!-- HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales -->
+      <class name="HollandCRM_Prod_Smoke.ContactContactlistUnderSales">
+        <methods>
+          <include name="quit"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- HollandCRM_Prod_Smoke.ContactContactlistUnderSales -->
       <class name="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales">
         <methods>
           <include name="init"/>
@@ -218,30 +42,23 @@
       <class name="HollandCRM_Prod_Smoke.CustomerInformationUnderSales">
         <methods>
           <include name="quit"/>
-          <include name="AccountInformationUnderSales"/>
           <include name="init"/>
-          <include name="Validate_AccountName_Displayed_AccountListUnderSales"/>
+          <include name="Validate_AccessToAccountListUnderSales" invocation-numbers="0"/>
           <include name="Validate_AccountInformation_Displayed_AccountListUnderSales" invocation-numbers="0"/>
         </methods>
       </class> <!-- HollandCRM_Prod_Smoke.CustomerInformationUnderSales -->
-      <class name="HollandCRM_Prod_Smoke.ContactContactlistUnderSales">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.ContactContactlistUnderSales -->
-      <class name="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities -->
       <class name="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales">
         <methods>
           <include name="init"/>
           <include name="quit"/>
         </methods>
       </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales -->
+      <class name="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities">
+        <methods>
+          <include name="quit"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities -->
     </classes>
   </test> <!-- Test7(failed) -->
 </suite> <!-- Failed suite [SuiteName] -->
