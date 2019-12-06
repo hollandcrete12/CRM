@@ -149,13 +149,7 @@ public class ContactContactlistUnderSales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		DefaultLanding();
-		wait(3);
-		click("Profile_New_xpath");
-		wait(2);
-		click("Signout_new_xpath");
-		System.out.println("User have been signout successfully"); 
-		driver.close();
+		signOut();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

@@ -102,11 +102,11 @@ public class CustomerInformationUnderSales extends BaseTest {
 		/*
 		String IName=driver.findElement(By.tagName("Iframe")).getText();
 		System.out.println(IName);
-		SmartFrames(data1.get("Browser"));  */
+		SmartFrames(data1.get("Browser"));  
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id='account information_c']"))));
-		
+		*/
 		IsDisplayed("AccountInfo_xpath");
 		
 		String AccountInfo =getElement("AccountInfo_xpath").getText();
@@ -118,26 +118,14 @@ public class CustomerInformationUnderSales extends BaseTest {
 	
 
 	
-	@Test(priority=3,dependsOnMethods={"Validate_AccountInformation_Displayed_AccountListUnderSales"}) 
-	public void Validate_AccountName_Displayed_AccountListUnderSales() {
-		softAssert = new SoftAssert();
-		test= rep.startTest("Validate_AccountName_Displayed_AccountListUnderSales");
-		test.log(LogStatus.INFO, "Starting the Validate_AccountName_Displayed_AccountListUnderSales");
-		
-		String AccountName1=getElement("AccountName_xpath").getText();
-		assertTrue(AccountName1.equals("Adkins Energy"));
-		IsDisplayed("AccountName_xpath");
-		
-		test.log(LogStatus.PASS, "Test Validate_AccountName_Displayed_AccountListUnderSales is successfull");
-	}
-	
-	@Test(priority=4,dependsOnMethods={"Validate_AccountName_Displayed_AccountListUnderSales"})
+
+	@Test(priority=3)
 	public void AccountInformationUnderSales(){
 		softAssert = new SoftAssert();
-		test= rep.startTest("AccountInformationUnderSales");
-		test.log(LogStatus.INFO, "Starting the AccountInformationUnderSales");
+		test= rep.startTest("CustomerInformationUnderSales");
+		test.log(LogStatus.INFO, "Starting the CustomerInformationUnderSales");
 	
-		test.log(LogStatus.PASS, "Dependant tests are successful so AccountInformationUnderSales is successfull");
+		test.log(LogStatus.PASS, "Dependant tests are successful so CustomerInformationUnderSales is successfull");
 		
 	}
 

@@ -88,9 +88,9 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 	    
 		wait(2);
 		
-		if(!isElementPresent("Resource_Booking_name_linktext"))
-			reportFailure("Resource_Booking_name_linktext is not present by please verify Xpath");
-		click("Resource_Booking_name_linktext");
+		if(!isElementPresent("Resource_Booking_name_xpath"))
+			reportFailure("Resource_Booking_name_xpath is not present by please verify Xpath");
+		click("Resource_Booking_name_xpath");
 	    
 		
 	
@@ -107,9 +107,9 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 		
 		wait(2);
 		
-		if(!isElementPresent("Resource_Booking_name_property_id"))
-			reportFailure("Resource_Booking_name_property_id is not present by please verify Xpath");
-		click("Resource_Booking_name_property_id");
+		if(!isElementPresent("Resource_Booking_name_property_xpath"))
+			reportFailure("Resource_Booking_name_property_xpath is not present by please verify Xpath");
+		click("Resource_Booking_name_property_xpath");
 	    
 		
 	
@@ -131,17 +131,7 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 
 	@AfterTest
 	public void quit(){
-		
-		
-		DefaultLanding();
-		wait(3);
-		click("Profile_New_xpath");
-		wait(2);
-		click("Signout_new_xpath");
-		System.out.println("User have been signout successfully"); 
-		driver.close();
-		
-		
+		signOut();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

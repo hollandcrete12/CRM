@@ -125,13 +125,8 @@ public class Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities extends B
 	}
 
 	@AfterTest
-	public void quit(){DefaultLanding();
-	wait(3);
-	click("Profile_New_xpath");
-	wait(2);
-	click("Signout_new_xpath");
-	System.out.println("User have been signout successfully"); 
-	driver.close();
+	public void quit(){
+		signOut();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

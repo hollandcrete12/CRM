@@ -173,7 +173,7 @@ public class BaseTest {
 			}
 			else {
 				test.log(LogStatus.INFO, locatorKey +"is not correct");
-				reportFailure("Please make sure"+locatorKey +" is Clickable or check property of the element" );;
+				reportFailure("Please make sure "+locatorKey +" is Clickable or check property of the element" );;
 			}
 		
 	}
@@ -411,7 +411,7 @@ public void waitForPageToLoad() throws InterruptedException {
 public boolean doLogin(String username,String password)  {
 	test.log(LogStatus.INFO, "Trying to login with "+ username+","+password);
 //	click("loginLink_xpath");
-
+	wait(2);
 	type("email_xpath",username);
 	wait(2);
 	click("username_next_xpath");
@@ -435,11 +435,9 @@ public boolean doLogin(String username,String password)  {
 
 public void signOut() {
 	wait(3);
-	DefaultLanding();
-	wait(3);
-	click("Profile_Click_xpath");
+	click("Profile_New_xpath");
 	wait(2);
-	click("SignOut_xpath");
+	click("Signout_new_xpath");
 	System.out.println("User have been signout successfully"); 
 	driver.close();
 	
