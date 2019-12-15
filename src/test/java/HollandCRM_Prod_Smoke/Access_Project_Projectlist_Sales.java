@@ -50,12 +50,12 @@ public class Access_Project_Projectlist_Sales extends BaseTest {
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
 			test.log(LogStatus.INFO, "Login Successful");
 			wait(2);
-			click("Next_css");
+			/*click("Next_css");
 			
 			if(!isElementPresent("Holland_xpath"))
 				reportFailure("Holland is not present please verify Xpath");
 			click("Holland_xpath");
-			
+			*/
 			
 			click("Projects_UnderSales_xpath");
 			wait(1);

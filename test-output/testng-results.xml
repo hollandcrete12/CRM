@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67108" started-at="2019-12-06T22:58:57Z" finished-at="2019-12-06T23:00:04Z">
+  <suite started-at="2019-12-15T19:30:13Z" name="Default suite" finished-at="2019-12-15T19:31:25Z" duration-ms="72108">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="67108" started-at="2019-12-06T22:58:57Z" finished-at="2019-12-06T23:00:04Z">
+    <test started-at="2019-12-15T19:30:13Z" name="Default test" finished-at="2019-12-15T19:31:25Z" duration-ms="72108">
       <class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales">
-        <test-method status="PASS" signature="init()[pri:0, instance:HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales@971d0d8]" name="init" is-config="true" duration-ms="3" started-at="2019-12-06T16:58:58Z" finished-at="2019-12-06T16:58:58Z">
+        <test-method is-config="true" signature="init()[pri:0, instance:HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales@2812b107]" started-at="2019-12-15T13:30:14Z" name="init" finished-at="2019-12-15T13:30:14Z" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="Access_Project_Projectlist_Sales(java.util.Hashtable)[pri:1, instance:HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales@971d0d8]" name="Access_Project_Projectlist_Sales" duration-ms="56739" started-at="2019-12-06T16:58:58Z" data-provider="getData" finished-at="2019-12-06T16:59:55Z">
+        <test-method signature="Access_Project_Projectlist_Sales(java.util.Hashtable)[pri:1, instance:HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales@2812b107]" started-at="2019-12-15T13:30:14Z" name="Access_Project_Projectlist_Sales" data-provider="getData" finished-at="2019-12-15T13:31:16Z" duration-ms="62753" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Access_Project_Projectlist_Sales -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales@971d0d8]" name="quit" is-config="true" duration-ms="9692" started-at="2019-12-06T16:59:55Z" finished-at="2019-12-06T17:00:04Z">
+        <test-method is-config="true" signature="quit()[pri:0, instance:HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales@2812b107]" started-at="2019-12-15T13:31:16Z" name="quit" finished-at="2019-12-15T13:31:25Z" duration-ms="8749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

@@ -48,11 +48,11 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
 			
 			wait(2);
-			click("Next_css");
+		//	click("Next_css");
 			
 		//	softAssert.assertTrue(verifyText("Project_Ser_xpath","Project_Service_xpath"), "Text did not match");
 			
-			click("Holland_xpath");
+		//	click("Holland_xpath");
 			
 			ScrollToElement("Resource_css");
 

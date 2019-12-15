@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [SuiteName]" guice-stage="DEVELOPMENT">
-  <test parallel="tests" name="Test7(failed)">
+<suite name="Failed suite [SuiteName]" guice-stage="DEVELOPMENT">
+  <test name="Test2(failed)">
     <classes>
       <class name="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales">
         <methods>
@@ -23,7 +23,10 @@
       </class> <!-- HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales -->
       <class name="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales">
         <methods>
+          <include name="ValidateAccessToResourceUnderSales" invocation-numbers="0"/>
           <include name="quit"/>
+          <include name="Access_Resource_Resourcelist_Sales"/>
+          <include name="Validate_NavToSelectedResource_Name_Displayed"/>
           <include name="init"/>
         </methods>
       </class> <!-- HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales -->
@@ -43,8 +46,6 @@
         <methods>
           <include name="quit"/>
           <include name="init"/>
-          <include name="Validate_AccessToAccountListUnderSales" invocation-numbers="0"/>
-          <include name="Validate_AccountInformation_Displayed_AccountListUnderSales" invocation-numbers="0"/>
         </methods>
       </class> <!-- HollandCRM_Prod_Smoke.CustomerInformationUnderSales -->
       <class name="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales">
@@ -60,5 +61,5 @@
         </methods>
       </class> <!-- HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities -->
     </classes>
-  </test> <!-- Test7(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [SuiteName] -->

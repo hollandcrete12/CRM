@@ -46,7 +46,7 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 			openBrowser(data1.get("Browser"));
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
-			wait(1);
+	/*		wait(1);
 			
 			wait(2);
 			click("Next_css");
@@ -56,7 +56,7 @@ public class Access_ResourceBooking_Resource_Sales extends BaseTest {
 			if(!isElementPresent("Holland_xpath"))
 				reportFailure("Holland is not present by please verify Xpath");
 			
-			click("Holland_xpath");
+			click("Holland_xpath");  */
 			
 
 			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");

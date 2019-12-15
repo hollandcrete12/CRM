@@ -51,14 +51,14 @@ public class Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities extends B
 
 			navigate("app1url");
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
-			wait(2);
+		/*	wait(2);
 			
 			click("Next_css");
 			wait(2);
 			if(!isElementPresent("Holland_xpath"))
 				reportFailure("Holland is not present by please verify Xpath");
 			
-			click("Holland_xpath");
+			click("Holland_xpath");  */
 			
 			test.log(LogStatus.PASS, "Test Navigate to Holland button is successfull");
 			
