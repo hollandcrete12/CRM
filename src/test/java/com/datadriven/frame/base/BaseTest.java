@@ -411,7 +411,7 @@ public void waitForPageToLoad() throws InterruptedException {
 public boolean doLogin(String username,String password)  {
 	test.log(LogStatus.INFO, "Trying to login with "+ username+","+password);
 //	click("loginLink_xpath");
-	wait(2);
+	wait(3);
 	type("email_xpath",username);
 	wait(2);
 	click("username_next_xpath");

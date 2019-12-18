@@ -2,7 +2,6 @@
 
 <html>
   <head>
-  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
     <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
@@ -24,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-SuiteName" class="navigator-link">
+              <span class="suite-name border-failed">SuiteName</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\KPatel\AppData\Local\Temp\testng-eclipse--1366936669\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-SuiteName" class="navigator-link ">
+                    <span>C:\Users\KPatel\eclipse-workspace\Datadriven_Frame\src\test\resources\testng_Smoke.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" panel-name="testlist-SuiteName" class="navigator-link ">
+                    <span class="test-stats">9 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-SuiteName" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-SuiteName" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-SuiteName" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-SuiteName" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-SuiteName" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +90,184 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">30 methods, 2 failed,  2 skipped,  26 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-SuiteName" class="hide-methods failed suite-SuiteName"> (hide)</a> <!-- hide-methods failed suite-SuiteName -->
+                      <a href="#" panel-name="suite-SuiteName" class="show-methods failed suite-SuiteName"> (show)</a> <!-- show-methods failed suite-SuiteName -->
+                    </span>
+                    <div class="method-list-content failed suite-SuiteName">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales" class="method navigator-link" hash-for-method="Access_ResourceBooking_Resource_Sales">Access_ResourceBooking_Resource_Sales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales" class="method navigator-link" hash-for-method="ValidateAccessToResourceUnderSales({Col4=ok, Col3=A3, Col2=A2, Runmode=Y, Browser=Chrome})">ValidateAccessToResourceUnderSales({Col4=ok, Col3=A3, Col2=A2, Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-SuiteName -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-SuiteName" class="hide-methods skipped suite-SuiteName"> (hide)</a> <!-- hide-methods skipped suite-SuiteName -->
+                      <a href="#" panel-name="suite-SuiteName" class="show-methods skipped suite-SuiteName"> (show)</a> <!-- show-methods skipped suite-SuiteName -->
+                    </span>
+                    <div class="method-list-content skipped suite-SuiteName">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales" class="method navigator-link" hash-for-method="Access_Resource_Resourcelist_Sales">Access_Resource_Resourcelist_Sales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales" class="method navigator-link" hash-for-method="Validate_NavToSelectedResource_Name_Displayed">Validate_NavToSelectedResource_Name_Displayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-SuiteName -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-SuiteName" class="hide-methods passed suite-SuiteName"> (hide)</a> <!-- hide-methods passed suite-SuiteName -->
+                      <a href="#" panel-name="suite-SuiteName" class="show-methods passed suite-SuiteName"> (show)</a> <!-- show-methods passed suite-SuiteName -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-SuiteName">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales" class="method navigator-link" hash-for-method="Access_Project_Projectlist_Sales({Username=A2, Password=A3, Runmode=Y, Browser=Chrome})">Access_Project_Projectlist_Sales({Username=A2, Password=A3, Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.ContactContactlistUnderSales" class="method navigator-link" hash-for-method="AccessToContactListUnderSales({Runmode=Y, Browser=Chrome})">AccessToContactListUnderSales({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales" class="method navigator-link" hash-for-method="Access_Project_Projectlist_Sales({Username=A2, Password=A3, Runmode=Y, Browser=Chrome})">Access_Project_Projectlist_Sales({Username=A2, Password=A3, Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales" class="method navigator-link" hash-for-method="Access_ResourceBooking_Resource_Sales1({Runmode=Y, Browser=Chrome})">Access_ResourceBooking_Resource_Sales1({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales" class="method navigator-link" hash-for-method="Access_ResourceRequirement_PropertyPage">Access_ResourceRequirement_PropertyPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales" class="method navigator-link" hash-for-method="Access_ResourceRequirement_Resource_Sales">Access_ResourceRequirement_Resource_Sales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales" class="method navigator-link" hash-for-method="Access_ResourceSkill_PropertyPage_Sales">Access_ResourceSkill_PropertyPage_Sales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales" class="method navigator-link" hash-for-method="Access_ResourceSkill_Resourcelist_Sales">Access_ResourceSkill_Resourcelist_Sales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales" class="method navigator-link" hash-for-method="Access_ResourceSkill_Sales({Runmode=Y, Browser=Chrome})">Access_ResourceSkill_Sales({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales" class="method navigator-link" hash-for-method="Access_Resourcelist_Sales({Runmode=Y, Browser=Chrome})">Access_Resourcelist_Sales({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.CustomerInformationUnderSales" class="method navigator-link" hash-for-method="AccountInformationUnderSales">AccountInformationUnderSales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.ContactContactlistUnderSales" class="method navigator-link" hash-for-method="ContactContactlistUnderSales">ContactContactlistUnderSales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.ContactContactlistUnderSales" class="method navigator-link" hash-for-method="FirstName_LastName_Displayed_ContactContactListGeneralInformation">FirstName_LastName_Displayed_ContactContactListGeneralInformation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.ContactContactlistUnderSales" class="method navigator-link" hash-for-method="GeneralInformation_Displayed_ContactListUnderSales({Runmode=Y, Browser=Chrome})">GeneralInformation_Displayed_ContactListUnderSales({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.CustomerInformationUnderSales" class="method navigator-link" hash-for-method="Validate_AccessToAccountListUnderSales({Runmode=Y, Browser=Chrome})">Validate_AccessToAccountListUnderSales({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities" class="method navigator-link" hash-for-method="Validate_AccessToListofOpportunities({Runmode=Y, Browser=Chrome})">Validate_AccessToListofOpportunities({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales" class="method navigator-link" hash-for-method="Validate_AccessToListofResourceBooking">Validate_AccessToListofResourceBooking</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales" class="method navigator-link" hash-for-method="Validate_AccessToListofResourceRequirment({Runmode=Y, Browser=Chrome})">Validate_AccessToListofResourceRequirment({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.CustomerInformationUnderSales" class="method navigator-link" hash-for-method="Validate_AccountInformation_Displayed_AccountListUnderSales({Runmode=Y, Browser=Chrome})">Validate_AccountInformation_Displayed_AccountListUnderSales({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities" class="method navigator-link" hash-for-method="Validate_AccountName_Displayed_AccountListUnderSales4">Validate_AccountName_Displayed_AccountListUnderSales4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales" class="method navigator-link" hash-for-method="Validate_NavToSelectedProject_Name_Displayed({Runmode=Y, Browser=Chrome})">Validate_NavToSelectedProject_Name_Displayed({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales" class="method navigator-link" hash-for-method="Validate_NavToSelectedResourceskill({Runmode=Y, Browser=Chrome})">Validate_NavToSelectedResourceskill({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales" class="method navigator-link" hash-for-method="Validate_NavToSelectedRoles({Runmode=Y, Browser=Chrome})">Validate_NavToSelectedRoles({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales" class="method navigator-link" hash-for-method="Validate_NavToSelectedRolesLandingPage({Runmode=Y, Browser=Chrome})">Validate_NavToSelectedRolesLandingPage({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales" class="method navigator-link" hash-for-method="Validate_NavToSelected_Booking({Runmode=Y, Browser=Chrome})">Validate_NavToSelected_Booking({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales" class="method navigator-link" hash-for-method="Validate_NavToSelected_Requirement({Runmode=Y, Browser=Chrome})">Validate_NavToSelected_Requirement({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteName" title="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities" class="method navigator-link" hash-for-method="Validate_OpportunitySelected_Name_Displayed({Runmode=Y, Browser=Chrome})">Validate_OpportunitySelected_Name_Displayed({Runmode=Y, Browser=Chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-SuiteName -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,8 +278,135 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-SuiteName" class="panel SuiteName">
+          <div class="suite-SuiteName-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_ResourceBooking_Resource_Sales">
+                  </a> <!-- Access_ResourceBooking_Resource_Sales -->
+                  <span class="method-name">Access_ResourceBooking_Resource_Sales</span>
+                  <div class="stack-trace">java.lang.AssertionError: Resource_Booking_name_property_xpath is not present by please verify Xpath
+	at com.datadriven.frame.base.BaseTest.reportFailure(BaseTest.java:331)
+	at HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales.Access_ResourceBooking_Resource_Sales(Access_ResourceBooking_Resource_Sales.java:111)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-failed -->
+          <div class="suite-SuiteName-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateAccessToResourceUnderSales({Col4=ok, Col3=A3, Col2=A2, Runmode=Y, Browser=Chrome})">
+                  </a> <!-- ValidateAccessToResourceUnderSales({Col4=ok, Col3=A3, Col2=A2, Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">ValidateAccessToResourceUnderSales</span>
+                  <span class="parameters">({Col4=ok, Col3=A3, Col2=A2, Runmode=Y, Browser=Chrome})</span>
+                  <div class="stack-trace">java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#sitemap-entity-msdyn_ResourceSubArea .bf &gt; .bu&quot;}
+  (Session info: chrome=79.0.3945.79)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:06:42&apos;
+System info: host: &apos;IS54&apos;, ip: &apos;192.168.1.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54461}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\KPatel\AppData\Local\Temp\scoped_dir1968_12341}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ae3d24c4ea0051f63232983024d6ed3f
+*** Element info: {Using=css selector, value=#sitemap-entity-msdyn_ResourceSubArea .bf &gt; .bu}
+	at com.datadriven.frame.base.BaseTest.reportFailure(BaseTest.java:331)
+	at com.datadriven.frame.base.BaseTest.getElement(BaseTest.java:266)
+	at com.datadriven.frame.base.BaseTest.ScrollToElement(BaseTest.java:191)
+	at HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales.ValidateAccessToResourceUnderSales(Access_Resource_Resourcelist_Sales.java:57)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-failed -->
+          <div class="suite-SuiteName-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_Resource_Resourcelist_Sales">
+                  </a> <!-- Access_Resource_Resourcelist_Sales -->
+                  <span class="method-name">Access_Resource_Resourcelist_Sales</span>
+                  <div class="stack-trace">java.lang.Throwable: Method Access_Resource_Resourcelist_Sales.Access_Resource_Resourcelist_Sales()[pri:3, instance:HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales@548a24a] depends on not successfully finished methods
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_NavToSelectedResource_Name_Displayed">
+                  </a> <!-- Validate_NavToSelectedResource_Name_Displayed -->
+                  <span class="method-name">Validate_NavToSelectedResource_Name_Displayed</span>
+                  <div class="stack-trace">java.lang.Throwable: Method Access_Resource_Resourcelist_Sales.Validate_NavToSelectedResource_Name_Displayed(java.util.Hashtable)[pri:2, instance:HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales@548a24a] depends on not successfully finished methods
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-skipped -->
+          <div class="suite-SuiteName-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_Resourcelist_Sales({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Access_Resourcelist_Sales({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Access_Resourcelist_Sales</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_NavToSelectedProject_Name_Displayed({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_NavToSelectedProject_Name_Displayed({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_NavToSelectedProject_Name_Displayed</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_NavToSelectedRoles({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_NavToSelectedRoles({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_NavToSelectedRoles</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_NavToSelectedRolesLandingPage({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_NavToSelectedRolesLandingPage({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_NavToSelectedRolesLandingPage</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-passed -->
+          <div class="suite-SuiteName-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales</span>
@@ -132,89 +421,476 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-SuiteName-class-passed -->
+          <div class="suite-SuiteName-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_ResourceBooking_Resource_Sales1({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Access_ResourceBooking_Resource_Sales1({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Access_ResourceBooking_Resource_Sales1</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_AccessToListofResourceBooking">
+                  </a> <!-- Validate_AccessToListofResourceBooking -->
+                  <span class="method-name">Validate_AccessToListofResourceBooking</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_NavToSelected_Booking({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_NavToSelected_Booking({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_NavToSelected_Booking</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-passed -->
+          <div class="suite-SuiteName-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.ContactContactlistUnderSales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AccessToContactListUnderSales({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- AccessToContactListUnderSales({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">AccessToContactListUnderSales</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ContactContactlistUnderSales">
+                  </a> <!-- ContactContactlistUnderSales -->
+                  <span class="method-name">ContactContactlistUnderSales</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="FirstName_LastName_Displayed_ContactContactListGeneralInformation">
+                  </a> <!-- FirstName_LastName_Displayed_ContactContactListGeneralInformation -->
+                  <span class="method-name">FirstName_LastName_Displayed_ContactContactListGeneralInformation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GeneralInformation_Displayed_ContactListUnderSales({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- GeneralInformation_Displayed_ContactListUnderSales({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">GeneralInformation_Displayed_ContactListUnderSales</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-passed -->
+          <div class="suite-SuiteName-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_ResourceSkill_PropertyPage_Sales">
+                  </a> <!-- Access_ResourceSkill_PropertyPage_Sales -->
+                  <span class="method-name">Access_ResourceSkill_PropertyPage_Sales</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_ResourceSkill_Resourcelist_Sales">
+                  </a> <!-- Access_ResourceSkill_Resourcelist_Sales -->
+                  <span class="method-name">Access_ResourceSkill_Resourcelist_Sales</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_ResourceSkill_Sales({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Access_ResourceSkill_Sales({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Access_ResourceSkill_Sales</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_NavToSelectedResourceskill({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_NavToSelectedResourceskill({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_NavToSelectedResourceskill</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-passed -->
+          <div class="suite-SuiteName-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.CustomerInformationUnderSales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AccountInformationUnderSales">
+                  </a> <!-- AccountInformationUnderSales -->
+                  <span class="method-name">AccountInformationUnderSales</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_AccessToAccountListUnderSales({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_AccessToAccountListUnderSales({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_AccessToAccountListUnderSales</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_AccountInformation_Displayed_AccountListUnderSales({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_AccountInformation_Displayed_AccountListUnderSales({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_AccountInformation_Displayed_AccountListUnderSales</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-passed -->
+          <div class="suite-SuiteName-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_ResourceRequirement_PropertyPage">
+                  </a> <!-- Access_ResourceRequirement_PropertyPage -->
+                  <span class="method-name">Access_ResourceRequirement_PropertyPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Access_ResourceRequirement_Resource_Sales">
+                  </a> <!-- Access_ResourceRequirement_Resource_Sales -->
+                  <span class="method-name">Access_ResourceRequirement_Resource_Sales</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_AccessToListofResourceRequirment({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_AccessToListofResourceRequirment({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_AccessToListofResourceRequirment</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_NavToSelected_Requirement({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_NavToSelected_Requirement({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_NavToSelected_Requirement</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-passed -->
+          <div class="suite-SuiteName-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_AccessToListofOpportunities({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_AccessToListofOpportunities({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_AccessToListofOpportunities</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_AccountName_Displayed_AccountListUnderSales4">
+                  </a> <!-- Validate_AccountName_Displayed_AccountListUnderSales4 -->
+                  <span class="method-name">Validate_AccountName_Displayed_AccountListUnderSales4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_OpportunitySelected_Name_Displayed({Runmode=Y, Browser=Chrome})">
+                  </a> <!-- Validate_OpportunitySelected_Name_Displayed({Runmode=Y, Browser=Chrome}) -->
+                  <span class="method-name">Validate_OpportunitySelected_Name_Displayed</span>
+                  <span class="parameters">({Runmode=Y, Browser=Chrome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteName-class-passed -->
+        </div> <!-- panel SuiteName -->
+        <div panel-name="test-xml-SuiteName" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\KPatel\AppData\Local\Temp\testng-eclipse--1366936669\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\KPatel\eclipse-workspace\Datadriven_Frame\src\test\resources\testng_Smoke.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;SuiteName&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test name=&quot;Test1&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test name=&quot;Test2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
+  &lt;test name=&quot;Test3&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test3 --&gt;
+  &lt;test name=&quot;Test4&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test4 --&gt;
+  &lt;test name=&quot;Test5&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test5 --&gt;
+  &lt;test name=&quot;Test6&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test6 --&gt;
+  &lt;test name=&quot;Test7&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;HollandCRM_Prod_Smoke.CustomerInformationUnderSales&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test7 --&gt;
+  &lt;test name=&quot;Test8&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;HollandCRM_Prod_Smoke.ContactContactlistUnderSales&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test8 --&gt;
+  &lt;test name=&quot;Test9&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test9 --&gt;
+&lt;/suite&gt; &lt;!-- SuiteName --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-SuiteName" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for SuiteName</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test2 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test3 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test4 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test5 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test6 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test7 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test8 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test9 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-SuiteName" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for SuiteName</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-SuiteName" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for SuiteName</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_SuiteName');
+function tableData_SuiteName() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(30);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Access_Project_Projectlist_Sales')
-data.setCell(0, 2, 'HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales')
-data.setCell(0, 3, 62753);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'ValidateAccessToResourceUnderSales')
+data.setCell(0, 2, 'HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales')
+data.setCell(0, 3, 69710);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Access_Project_Projectlist_Sales')
+data.setCell(1, 2, 'HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales')
+data.setCell(1, 3, 63735);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Access_Resourcelist_Sales')
+data.setCell(2, 2, 'HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales')
+data.setCell(2, 3, 48542);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Validate_AccessToListofResourceRequirment')
+data.setCell(3, 2, 'HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales')
+data.setCell(3, 3, 48281);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Access_ResourceSkill_Sales')
+data.setCell(4, 2, 'HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales')
+data.setCell(4, 3, 45509);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Access_ResourceBooking_Resource_Sales1')
+data.setCell(5, 2, 'HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales')
+data.setCell(5, 3, 45172);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'Validate_AccessToListofOpportunities')
+data.setCell(6, 2, 'HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities')
+data.setCell(6, 3, 45115);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'AccessToContactListUnderSales')
+data.setCell(7, 2, 'HollandCRM_Prod_Smoke.ContactContactlistUnderSales')
+data.setCell(7, 3, 45028);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'Validate_AccessToAccountListUnderSales')
+data.setCell(8, 2, 'HollandCRM_Prod_Smoke.CustomerInformationUnderSales')
+data.setCell(8, 3, 44815);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'Access_ResourceBooking_Resource_Sales')
+data.setCell(9, 2, 'HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales')
+data.setCell(9, 3, 22603);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'Validate_AccountInformation_Displayed_AccountListUnderSales')
+data.setCell(10, 2, 'HollandCRM_Prod_Smoke.CustomerInformationUnderSales')
+data.setCell(10, 3, 21522);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'Validate_OpportunitySelected_Name_Displayed')
+data.setCell(11, 2, 'HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities')
+data.setCell(11, 3, 8449);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'GeneralInformation_Displayed_ContactListUnderSales')
+data.setCell(12, 2, 'HollandCRM_Prod_Smoke.ContactContactlistUnderSales')
+data.setCell(12, 3, 6336);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'Validate_NavToSelectedResourceskill')
+data.setCell(13, 2, 'HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales')
+data.setCell(13, 3, 6317);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'Access_ResourceRequirement_PropertyPage')
+data.setCell(14, 2, 'HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales')
+data.setCell(14, 3, 6006);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'Validate_AccessToListofResourceBooking')
+data.setCell(15, 2, 'HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales')
+data.setCell(15, 3, 5323);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'Validate_NavToSelected_Requirement')
+data.setCell(16, 2, 'HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales')
+data.setCell(16, 3, 5321);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'Validate_NavToSelectedProject_Name_Displayed')
+data.setCell(17, 2, 'HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales')
+data.setCell(17, 3, 5307);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'FirstName_LastName_Displayed_ContactContactListGeneralInformation')
+data.setCell(18, 2, 'HollandCRM_Prod_Smoke.ContactContactlistUnderSales')
+data.setCell(18, 3, 5120);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'Access_ResourceSkill_PropertyPage_Sales')
+data.setCell(19, 2, 'HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales')
+data.setCell(19, 3, 4635);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'Access_ResourceSkill_Resourcelist_Sales')
+data.setCell(20, 2, 'HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales')
+data.setCell(20, 3, 3466);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'Validate_NavToSelectedRoles')
+data.setCell(21, 2, 'HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales')
+data.setCell(21, 3, 3380);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'Access_ResourceRequirement_Resource_Sales')
+data.setCell(22, 2, 'HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales')
+data.setCell(22, 3, 3362);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'Validate_NavToSelected_Booking')
+data.setCell(23, 2, 'HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales')
+data.setCell(23, 3, 3306);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'Validate_NavToSelectedRolesLandingPage')
+data.setCell(24, 2, 'HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales')
+data.setCell(24, 3, 3293);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'Validate_AccountName_Displayed_AccountListUnderSales4')
+data.setCell(25, 2, 'HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities')
+data.setCell(25, 3, 2641);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'ContactContactlistUnderSales')
+data.setCell(26, 2, 'HollandCRM_Prod_Smoke.ContactContactlistUnderSales')
+data.setCell(26, 3, 2003);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'Access_Resource_Resourcelist_Sales')
+data.setCell(27, 2, 'HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales')
+data.setCell(27, 3, 0);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'Validate_NavToSelectedResource_Name_Displayed')
+data.setCell(28, 2, 'HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales')
+data.setCell(28, 3, 0);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'AccountInformationUnderSales')
+data.setCell(29, 2, 'HollandCRM_Prod_Smoke.CustomerInformationUnderSales')
+data.setCell(29, 3, 0);
+window.suiteTableData['SuiteName']= { tableData: data, tableDiv: 'times-div-SuiteName'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <div id="times-div-SuiteName">
+              </div> <!-- times-div-SuiteName -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-SuiteName" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for SuiteName</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-SuiteName" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-SuiteName" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -231,7 +907,283 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">quit</span>
-                <span class="method-start">62763 ms</span>
+                <span class="method-start">63741 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateAccessToResourceUnderSales({Col4=ok, Col3=A3, Col2=A2, Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">72972 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">72972 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">142686 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Access_ResourceBooking_Resource_Sales1({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">151713 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">151713 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_AccessToListofResourceBooking</span>
+                <span class="method-start">196886 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">196886 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">202337 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_NavToSelected_Booking({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">202338 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Access_ResourceBooking_Resource_Sales</span>
+                <span class="method-start">205645 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">205645 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">228248 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">237366 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_AccessToListofResourceRequirment({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">237370 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Validate_NavToSelected_Requirement({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">285734 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">285734 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">291056 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Access_ResourceRequirement_Resource_Sales</span>
+                <span class="method-start">291057 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">294419 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Access_ResourceRequirement_PropertyPage</span>
+                <span class="method-start">294420 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">300426 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Access_Resourcelist_Sales({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">309597 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">309597 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_NavToSelectedProject_Name_Displayed({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">358201 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">358201 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_NavToSelectedRoles({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">363551 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">363551 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">367018 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_NavToSelectedRolesLandingPage({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">367022 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">370315 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Access_ResourceSkill_Sales({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">379368 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">379368 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">424937 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_NavToSelectedResourceskill({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">424938 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Access_ResourceSkill_Resourcelist_Sales</span>
+                <span class="method-start">431256 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">431256 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Access_ResourceSkill_PropertyPage_Sales</span>
+                <span class="method-start">434723 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">434723 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">439359 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">HollandCRM_Prod_Smoke.CustomerInformationUnderSales</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Validate_AccessToAccountListUnderSales({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">448369 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">448369 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_AccountInformation_Displayed_AccountListUnderSales({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">493233 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">493233 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AccountInformationUnderSales</span>
+                <span class="method-start">514755 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">514755 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">514756 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">HollandCRM_Prod_Smoke.ContactContactlistUnderSales</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AccessToContactListUnderSales({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">524131 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">524131 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">GeneralInformation_Displayed_ContactListUnderSales({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">569217 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">569217 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">FirstName_LastName_Displayed_ContactContactListGeneralInformation</span>
+                <span class="method-start">575555 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">575555 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">580675 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ContactContactlistUnderSales</span>
+                <span class="method-start">580676 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">582679 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Validate_AccessToListofOpportunities({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">591645 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">591645 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_OpportunitySelected_Name_Displayed({Runmode=Y, Browser=Chrome})</span>
+                <span class="method-start">636801 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">636801 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Validate_AccountName_Displayed_AccountListUnderSales4</span>
+                <span class="method-start">645251 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">645251 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">647892 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
