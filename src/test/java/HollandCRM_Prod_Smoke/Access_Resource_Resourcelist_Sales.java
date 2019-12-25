@@ -54,14 +54,14 @@ public class Access_Resource_Resourcelist_Sales extends BaseTest {
 			
 		//	click("Holland_xpath");
 			
-			ScrollToElement("Resource_css");
+			ScrollToElement("ResourceN_xpath");
 
 			wait(3);
-			if(!isElementPresent("Resource_css"))
+			if(!isElementPresent("ResourceN_xpath"))
 				reportFailure("Resource is not present by please verify Xpath");
 			
 			
-			click("Resource_css");
+			click("ResourceN_xpath");
 			wait(1);
 			wait(2);
 			test.log(LogStatus.PASS, "Test ValidateAccessToResourceUnderSales is successfull");

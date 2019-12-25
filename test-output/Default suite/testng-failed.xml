@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales">
+      <class name="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales">
         <methods>
-          <include name="Validate_NavToSelectedRoles" invocation-numbers="0"/>
+          <include name="ValidateAccessToResourceUnderSales" invocation-numbers="0"/>
           <include name="quit"/>
-          <include name="Validate_NavToSelectedProject_Name_Displayed" invocation-numbers="0"/>
-          <include name="Validate_NavToSelectedRolesLandingPage" invocation-numbers="0"/>
+          <include name="Access_Resource_Resourcelist_Sales"/>
+          <include name="Validate_NavToSelectedResource_Name_Displayed"/>
           <include name="init"/>
         </methods>
-      </class> <!-- HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales -->
+      </class> <!-- HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
